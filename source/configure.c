@@ -100,7 +100,7 @@ int atca_configure(uint8_t i2c_addr)
     }
 
     /* Check the config zone lock status */
-    if (ATCA_SUCCESS != (status = atcab_is_locked(ATCA_ZONE_CONFIG, &lock)))
+    if (ATCA_SUCCESS != (status = atcab_is_locked(LOCK_ZONE_CONFIG, &lock)))
     {
         printf("Unable to get config lock status: %x\r\n", status);
         goto exit;
